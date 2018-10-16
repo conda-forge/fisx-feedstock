@@ -10,10 +10,13 @@ source:
   sha256: c9dea8b6573e643cc966474a034fc6e916729fb9cba5cf361b5ec9a176dbc043
 
 build:
-  number: 0
+  number: 1000
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
 
 requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
     - numpy
     - pip
