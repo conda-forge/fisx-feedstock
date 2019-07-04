@@ -1,5 +1,5 @@
 {% set name = "fisx" %}
-{% set version = "1.1.6" %}
+{% set version = "1.1.7" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c9dea8b6573e643cc966474a034fc6e916729fb9cba5cf361b5ec9a176dbc043
+  sha256: 5e065912e2b88f212c211bb3a98ee33364f943076cbb577007f1782b73f90720
 
 build:
-  number: 1000
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv "
 
 requirements:
